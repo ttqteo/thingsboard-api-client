@@ -1,5 +1,5 @@
 {
-  "name": "thingsboard-client-api",
+  "name": "thingsboard-api-client",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
