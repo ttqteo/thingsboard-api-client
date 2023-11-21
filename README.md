@@ -2,7 +2,24 @@
 
 ## Install
 ```sh
-npm i thingsboard-api-client
+npm i thingsboard-api-client@latest
+```
+
+## Usage
+
+```typescript
+import { ThingsboardApiClient } from "thingsboard-api-client";
+
+const client = new ThingsboardApiClient();
+
+async function login() {
+  const resp = (await client.LoginEndpoint().login({
+    username: "username",
+    password: "password",
+  })) as any;
+}
+
+login();
 ```
 
 ## Test locally

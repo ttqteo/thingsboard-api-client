@@ -1,4 +1,5 @@
 import { AxiosInstance } from "axios";
+import HttpException from "../models/http-exception";
 
 interface LoginReq {
   username: string;
@@ -19,11 +20,7 @@ export default class LoginEndpoint {
   }
 
   public async login(body: LoginReq) {
-    try {
-      const url = `/api/auth/login`;
-      return await this.instance.post<LoginRes>(url, body);
-    } catch (error) {
-      console.error(error);
-    }
+    const url = `/api/auth/login`;
+    return await this.instance.post<LoginRes>(url, body);
   }
 }
