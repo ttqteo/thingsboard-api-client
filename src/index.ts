@@ -1,31 +1,15 @@
-import axios, { AxiosInstance } from "axios";
-import config from "./config";
+import { AxiosInstance } from "axios";
+import clientConfig from "./client";
+import LoginEndpoint from "./controllers/login-endpoint";
 
-interface LoginEndpointBody {
-  username: string;
-  password: string;
-}
-
-interface LoginEndpointResponse {
-  token: string;
-  refreshToken: string;
-  expiredIn: number;
-}
-export default class ThingsboardApiClient {
+export class ThingsboardApiClient {
   private instance: AxiosInstance;
 
   constructor(baseURL?: string) {
-    this.instance = axios.create({
-      baseURL: baseURL || config.baseURL,
-    });
+    this.instance = clientConfig(baseURL);
   }
 
-  public async loginEndpoint(body: LoginEndpointBody) {
-    try {
-      const url = `/api/auth/login`;
-      return await this.instance.post<LoginEndpointResponse>(url, body);
-    } catch (error) {
-      console.error(error);
-    }
+  public LoginEndpoint() {
+    return new LoginEndpoint(this.instance);
   }
 }

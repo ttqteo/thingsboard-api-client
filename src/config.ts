@@ -1,5 +1,5 @@
 const config = {
-  baseURL: "https://thingsboard.cloud",
+  defaultBaseURL: "https://thingsboard.cloud",
 };
 
 export default config;
