@@ -1,12 +1,20 @@
 # Changelog
+What's news? Please check it out.
+
+## [1.0.4]
+### Improvements
+* add `Bearer` prefix token
+* add **User Controller**: `saveUser`
+* add **Telemetry Controller**: `saveDevicesAttributes`, `saveEntityAttributesV1`, `saveEntityAttributesV2`, `getAttributes`, `getAttributesByScope`, `getTimeseries`, `getLatestTimeseries`
+* add **Device Controller**: `getCustomerDeviceInfos`, `saveDevice`, `getDeviceCedentialsByDeviceId`
 ## [1.0.3]
-### Features
+### Improvements
 * add **Auth Controller**: `getUser`, `changePassword` 
 ## [1.0.2]
-### Features
+### Improvements
 * separate `LoginEndpoint` into folder **controllers**
 ## [1.0.1]
-### Features
+### Improvements
 * add `LoginEndpoint`
 ## [1.0.0]
 ### Features
