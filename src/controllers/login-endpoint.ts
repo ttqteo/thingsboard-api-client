@@ -1,16 +1,4 @@
 import { AxiosInstance } from "axios";
-import HttpException from "../models/http-exception";
-
-interface LoginReq {
-  username: string;
-  password: string;
-}
-
-interface LoginRes {
-  token: string;
-  refreshToken: string;
-  expiredIn: number;
-}
 
 export default class LoginEndpoint {
   private instance: AxiosInstance;
@@ -19,8 +7,11 @@ export default class LoginEndpoint {
     this.instance = instance;
   }
 
-  public async login(body: LoginReq) {
+  public async login(body: { username: string; password: string }) {
     const url = `/api/auth/login`;
-    return await this.instance.post<LoginRes>(url, body);
+    return await this.instance.post<{
+      token: string;
+      refreshToken: string;
+    }>(url, body);
   }
 }
