@@ -1,6 +1,10 @@
 # Changelog
 What's news? Please check it out.
 
+## [1.0.5]
+### Improvements
+* add **Device Controller**: `getDeviceInfoById`
+
 ## [1.0.4]
 ### Improvements
 * add `Bearer` prefix token

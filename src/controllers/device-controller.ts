@@ -38,6 +38,15 @@ export default class DeviceController {
     });
   }
 
+  public async getDeviceInfoById(token: string, path: { deviceId: string }) {
+    const url = `/api/device/info/${path.deviceId}`;
+    return await this.instance.get<IDeviceInfo>(url, {
+      headers: {
+        "X-Authorization": `Bearer ${token}`,
+      },
+    });
+  }
+
   public async saveDevice(
     token: string,
     query: {
