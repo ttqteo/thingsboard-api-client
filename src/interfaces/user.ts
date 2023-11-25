@@ -1,4 +1,5 @@
-import { EAuthoritym, IEntity } from "./common";
+import { IEntity } from "./common";
+import { TbAuthority } from "./enums";
 
 export interface IUser {
   id?: IEntity;
@@ -7,7 +8,7 @@ export interface IUser {
   customerId?: IEntity;
   email: string;
   name: string;
-  authority: EAuthoritym;
+  authority: TbAuthority;
   firstName?: string;
   lastname?: string;
   phone?: string;

@@ -1,5 +1,5 @@
 import { AxiosInstance } from "axios";
-import { EEntity } from "../interfaces/common";
+import { TbEntity } from "../interfaces/enums";
 
 export default class TelemetryController {
   private instance: AxiosInstance;
@@ -27,7 +27,7 @@ export default class TelemetryController {
   public async saveEntityAttributesV1(
     token: string,
     path: {
-      entityType: EEntity;
+      entityType: TbEntity;
       entityId: string;
       scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
     },
@@ -44,7 +44,7 @@ export default class TelemetryController {
   public async saveEntityAttributesV2(
     token: string,
     path: {
-      entityType: EEntity;
+      entityType: TbEntity;
       entityId: string;
       scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
     },
@@ -61,7 +61,7 @@ export default class TelemetryController {
   public async getAttributes(
     token: string,
     path: {
-      entityType: EEntity;
+      entityType: TbEntity;
       entityId: string;
       scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
     },
@@ -81,7 +81,7 @@ export default class TelemetryController {
   public async getAttributesByScope(
     token: string,
     path: {
-      entityType: EEntity;
+      entityType: TbEntity;
       entityId: string;
       scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
     },
@@ -101,7 +101,7 @@ export default class TelemetryController {
   public async getTimeseries(
     token: string,
     path: {
-      entityType: EEntity;
+      entityType: TbEntity;
       entityId: string;
     },
     query: {
@@ -127,7 +127,7 @@ export default class TelemetryController {
   public async getLatestTimeseries(
     token: string,
     path: {
-      entityType: EEntity;
+      entityType: TbEntity;
       entityId: string;
     },
     query: {
