@@ -1,5 +1,5 @@
 import { AxiosInstance } from "axios";
-import { TbEntity } from "../interfaces/enums";
+import { TbEntity, TbScope } from "../interfaces/enums";
 
 export default class TelemetryController {
   private instance: AxiosInstance;
@@ -95,6 +95,25 @@ export default class TelemetryController {
         "X-Authorization": `Bearer ${token}`,
       },
       params: query,
+    });
+  }
+
+  public async saveEntityTelemetry(
+    token: string,
+    path: {
+      entityType: TbEntity;
+      entityId: string;
+    },
+    body: any
+  ) {
+    const url = `/api/plugins/telemetry/${path.entityType}/${path.entityId}/timeseries/ANY`;
+    return await this.instance.post<{}>(url, body, {
+      headers: {
+        "X-Authorization": `Bearer ${token}`,
+      },
+      params: {
+        scope: "ANY",
+      },
     });
   }
 

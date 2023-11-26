@@ -12,4 +12,10 @@ enum TbEntity {
   ASSET = "ASSET",
 }
 
-export { TbAuthority, TbEntity };
+enum TbScope {
+  SERVER_SCOPE = "SERVER_SCOPE",
+  CLIENT_SCOPE = "CLIENT_SCOPE",
+  SHARED_SCOPE = "SHARED_SCOPE",
+}
+
+export { TbAuthority, TbEntity, TbScope };

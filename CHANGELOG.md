@@ -1,6 +1,10 @@
 # Changelog
 What's news? Please check it out.
 
+## [1.0.7]
+### Improvements
+* add **Telemetry Controller**: `saveEntityTelemetry`
+
 ## [1.0.6]
 ### Improvements
 * export Thingsboard constants: `TbAuthority`, `TbEntity`
