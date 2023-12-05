@@ -12,8 +12,6 @@ This module centralize Thingsboard API, helps to integrate in your web client.
   - [Installation](#installation)
   - [Example](#example)
   - [Test locally](#test-locally)
-    - [Step 1](#step-1)
-    - [Step 2](#step-2)
   - [Changelog](#changelog)
   - [License](#license)
   - [Copyright](#copyright)
@@ -45,13 +43,13 @@ login();
 
 ## Test locally
 
-### Step 1
+**Step 1**
 In new package, build and package the project into .tgz
 ```sh
 npm run build && npm pack
 ```
 
-### Step 2
+**Step 2**
 In consumer project, make sure **delete** `node_modules` and `package-lock.json` \
 Add to package.json 
 ```json
