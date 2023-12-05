@@ -12,7 +12,7 @@ export default class TelemetryController {
     token: string,
     path: {
       deviceId: string;
-      scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
+      scope: string;
     },
     payload: any
   ) {
@@ -29,7 +29,7 @@ export default class TelemetryController {
     path: {
       entityType: TbEntity;
       entityId: string;
-      scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
+      scope: string;
     },
     payload: any
   ) {
@@ -46,7 +46,7 @@ export default class TelemetryController {
     path: {
       entityType: TbEntity;
       entityId: string;
-      scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
+      scope: string;
     },
     payload: any
   ) {
@@ -63,7 +63,7 @@ export default class TelemetryController {
     path: {
       entityType: TbEntity;
       entityId: string;
-      scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
+      scope: string;
     },
     query: {
       keys?: string;
@@ -83,7 +83,7 @@ export default class TelemetryController {
     path: {
       entityType: TbEntity;
       entityId: string;
-      scope: ["SERVER_SCOPE", "SHARED_SCOPE", "CLIENT_SCOPE"];
+      scope: string;
     },
     query: {
       keys?: string;
@@ -129,8 +129,8 @@ export default class TelemetryController {
       endTs: number;
       interval?: number;
       limit?: number;
-      agg?: ["AVG", "COUNT", "MAX", "MIN", "NONE", "SUM"];
-      orderBy?: ["ASC", "DESC"];
+      agg?: string;
+      orderBy?: string;
       useStrictDataTypes?: boolean;
     }
   ) {

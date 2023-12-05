@@ -23,23 +23,14 @@ export default class AlarmController {
       entityId: string;
     },
     query: {
-      searchStatus?: ["ACK", "ACTIVE", "ANY", "CLEARED", "UNACK"];
-      status?: ["ACTIVE_ACK", "ACTIVE_UNACK", "CLEARED_ACK", "CLEARED_UNACK"];
+      searchStatus?: string;
+      status?: string;
       assigneeId?: string;
       page: number;
       pageSize: number;
       textSearch?: string;
-      sortProperty?: [
-        "ackTs",
-        "clearTs",
-        "createdTime",
-        "endTs",
-        "severity",
-        "startTs",
-        "status",
-        "type"
-      ];
-      sortOrder?: ["ASC", "DESC"];
+      sortProperty?: string;
+      sortOrder?: string;
       startTime?: number;
       endTime?: number;
       fetchOriginator?: boolean;
@@ -61,23 +52,14 @@ export default class AlarmController {
       entityId: string;
     },
     query: {
-      statusList?: ["ACK", "ACTIVE", "ANY", "CLEARED", "UNACK"];
-      severityList?: ["CRITICAL", "INDETERMINATE", "MAJOR", "MINOR", "WARNING"];
+      statusList?: string;
+      severityList?: string;
       typeList?: string;
       assigneeId?: string;
       page: number;
       pageSize: number;
-      sortProperty?: [
-        "ackTs",
-        "clearTs",
-        "createdTime",
-        "endTs",
-        "severity",
-        "startTs",
-        "status",
-        "type"
-      ];
-      sortOrder?: ["ASC", "DESC"];
+      sortProperty?: string;
+      sortOrder?: string;
       startTime?: number;
       endTime?: number;
     }

@@ -19,14 +19,8 @@ export default class DeviceController {
       deviceProfileId: string;
       active?: boolean;
       textSearch?: string;
-      sortProperty?: [
-        "createdTime",
-        "customerTitle",
-        "deviceProfileName",
-        "label",
-        "name"
-      ];
-      sortOrder?: ["ASC", "DESC"];
+      sortProperty?: string;
+      sortOrder?: string;
     }
   ) {
     const url = `/api/customer/${path.customerId}/deviceInfos`;

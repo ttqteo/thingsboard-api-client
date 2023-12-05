@@ -1,6 +1,10 @@
 # Changelog
 What's news? Please check it out.
 
+## [1.0.9]
+### Improvements
+* fix type cannot array
+
 ## [1.0.8]
 ### Improvements
 * add **Alarm Controller**: `getAlarms`, `getAlarmsV2`, `ackAlarm`, `clearAlarm`
